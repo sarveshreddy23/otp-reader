@@ -35,8 +35,8 @@ public class OtpReaderController {
         return ResponseEntity.ok("Otp saved successfully.");
     }
     @GetMapping("/all")
-    public ResponseEntity<List<String>> getAllOtps() {
-        return ResponseEntity.ok(messages.stream().map(Message::toString).collect(Collectors.toList()));
+    public ResponseEntity<List<Message>> getAllOtps() {
+        return ResponseEntity.ok(messages);
     }
 
 
